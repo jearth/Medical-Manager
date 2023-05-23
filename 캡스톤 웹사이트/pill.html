@@ -102,7 +102,7 @@
                     <th scope="col">복용 시간</th>
                   </tr>
                 </thead>
-                <tbody class="text-center">
+                <tbody class="text-center" id="my-tbody">
                   <tr>
                     <th scope="row">2023.5.12</th>
                     <td>타이레놀</td>
@@ -120,7 +120,20 @@
                   </tr>
                 </tbody>
             </table>
-    
+
+            <script>
+                function add_row() {
+                  var my_tbody = document.getElementById('my-tbody');
+                  var row = my_tbody.insertRow( my_tbody.rows.length );
+                  var cell1 = row.insertCell(0);
+                  var cell2 = row.insertCell(1);
+                  var cell3 = row.insertCell(2);
+                  cell1.innerHTML = '복용날짜';
+                  cell2.innerHTML = '약이름';
+                  cell3.innerHTML = '복용시간';
+                }
+              </script>
+          
             <div class="col-12 d-flex justify-content-center py-2">
                 <button class="btn btn-secondary" type="submit">추가</button>
             </div>
